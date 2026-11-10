@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse and filter upcoming GreenLoop community clean-up events.">
+  <title>Events | GreenLoop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="GreenLoop home">
+        <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+          <circle cx="18" cy="18" r="17" fill="#2e7d32"/>
+          <path d="M10 20c4-6 12-6 16 0-4 4-12 4-16 0z" fill="#a5d6a7"/>
+          <circle cx="18" cy="14" r="3" fill="#fff"/>
+        </svg>
+        <span>GreenLoop</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+      <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html" class="active" aria-current="page">Events</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="container">
+        <h1>Upcoming clean-ups</h1>
+        <p>Filter by location or search by name. Registrations take under a minute.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- CONTROLS -->
+        <form class="filter-bar" id="filterForm" role="search" aria-label="Filter events">
+          <div class="field">
+            <label for="searchInput">Search events</label>
+            <input type="search" id="searchInput" name="search" placeholder="e.g. park, beach, river">
+          </div>
+          <div class="field">
+            <label for="locationSelect">Location</label>
+            <select id="locationSelect" name="location">
+              <option value="all">All locations</option>
+              <option value="Riverside">Riverside</option>
+              <option value="City Centre">City Centre</option>
+              <option value="North Park">North Park</option>
+              <option value="Harbour">Harbour</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="difficultySelect">Difficulty</label>
+            <select id="difficultySelect" name="difficulty">
+              <option value="all">Any difficulty</option>
+              <option value="Easy">Easy</option>
+              <option value="Moderate">Moderate</option>
+              <option value="Challenging">Challenging</option>
+            </select>
+          </div>
+        </form>
+
+        <p class="result-count" id="resultCount" aria-live="polite"></p>
+        <div id="eventGrid" class="event-grid"></div>
+        <p class="empty-state" id="emptyState" hidden>No events match your filters. Try clearing them.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><p class="footer-brand">GreenLoop</p><p>Community clean-up hub — made by Group 06.</p></div>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li><li><a href="register.html">Register</a></li>
+        </ul>
+      </nav>
+      <p class="footer-note">&copy; <span id="year"></span> GreenLoop. Demo project for coursework.</p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
