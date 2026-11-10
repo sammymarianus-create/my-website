@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GreenLoop connects volunteers with local community clean-up events.">
+  <title>GreenLoop | Community Clean-Up Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="GreenLoop home">
+        <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+          <circle cx="18" cy="18" r="17" fill="#2e7d32"/>
+          <path d="M10 20c4-6 12-6 16 0-4 4-12 4-16 0z" fill="#a5d6a7"/>
+          <circle cx="18" cy="14" r="3" fill="#fff"/>
+        </svg>
+        <span>GreenLoop</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Clean streets start with neighbours.</h1>
+          <p>GreenLoop connects volunteers with local clean-up events, tracks community impact, and makes it easy to show up for your neighbourhood.</p>
+          <div class="hero-actions">
+            <a href="events.html" class="btn btn-primary">Find a clean-up</a>
+            <a href="register.html" class="btn btn-outline">Become a volunteer</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <p class="stat-number" id="statBags">0</p>
+          <p class="stat-label">bags collected this month</p>
+          <p class="stat-number" id="statVolunteers">0</p>
+          <p class="stat-label">active volunteers</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section">
+      <div class="container">
+        <h2>How GreenLoop works</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>1. Find an event</h3>
+            <p>Browse upcoming clean-ups near you, filter by date and location.</p>
+          </article>
+          <article class="card">
+            <h3>2. Register</h3>
+            <p>Sign up in seconds with our simple form — no account needed.</p>
+          </article>
+          <article class="card">
+            <h3>3. Show up &amp; help</h3>
+            <p>Meet your neighbours, collect litter, and track your impact.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED EVENTS (rendered by JS) -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Next clean-ups</h2>
+        <div id="featuredEvents" class="event-grid" aria-live="polite"></div>
+        <p class="center"><a href="events.html" class="btn btn-primary">See all events</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">GreenLoop</p>
+        <p>Community clean-up hub — made by Group 06.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </nav>
+      <p class="footer-note">&copy; <span id="year"></span> GreenLoop. Demo project for coursework.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
